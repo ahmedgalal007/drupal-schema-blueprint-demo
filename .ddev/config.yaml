@@ -2,6 +2,7 @@ name: schemademo
 type: drupal11
 docroot: web
 php_version: "8.4"
+nodejs_version: "24.14.0"
 webserver_type: nginx-fpm
 xdebug_enabled: false
 additional_hostnames: []
@@ -11,7 +12,6 @@ database:
     version: "11.8"
 hooks:
   post-start:
-    - exec: nvm install 24.14.0 && nvm alias default 24.14.0
     - exec: npm install --global yarn
 use_dns_when_possible: true
 composer_version: "2"
