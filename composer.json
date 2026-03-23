@@ -99,6 +99,13 @@
                 "  * Remove the plugin that prints this message:",
                 "      composer remove drupal/core-project-message"
             ]
+        },
+        "merge-plugin": {
+            "include": [
+                "web/modules/contrib/schemadotorg/composer.libraries.json"
+            ],
+            "merge-extra": true,
+            "merge-extra-deep": true
         }
     }
 }
