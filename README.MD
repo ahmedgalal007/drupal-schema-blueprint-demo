@@ -40,3 +40,35 @@ composer require drush/drush\
 ```bash
 composer update
 ```
+
+# Install modules.
+```bash
+drush install -y admin_toolbar devel schemadotorg_help
+```
+
+# Install all Schema.org Blueprints modules.
+```bash
+drush pm-list --format=list | grep schemadotorg | xargs drush install -y
+```
+## Or For DDEV
+```bash
+ddev drush pm-list --format=list | grep schemadotorg | xargs ddev drush install -y
+```
+
+# Install Schema.org Blueprints Core modules.
+```bash
+drush pm-list --format=list --package='Schema.org Blueprints Cor' | xargs drush install -y
+```
+## Or For DDEV
+```bash
+ddev drush pm-list --format=list --package='Schema.org Blueprints Cor' | xargs ddev drush install -y
+```
+
+# Install Schema.org Blueprints Core modules.
+```bash
+drush pm-list --format=list --package='Schema.org Blueprints Cor' | xargs drush install -y
+```
+## Or For DDEV
+```bash
+ddev drush pm-list --format=list --package='Schema.org Blueprints Cor' | xargs ddev drush install -y
+```

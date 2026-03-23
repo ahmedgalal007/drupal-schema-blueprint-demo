@@ -2,6 +2,7 @@
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/web/core/lib/Drupal/Component" isTestSource="false" packagePrefix="Drupal\Component\" />
       <sourceFolder url="file://$MODULE_DIR$/web/core/lib/Drupal/Component/Annotation/" isTestSource="false" packagePrefix="Drupal\Component\Annotation\" />
       <sourceFolder url="file://$MODULE_DIR$/web/core/lib/Drupal/Component/Assertion/" isTestSource="false" packagePrefix="Drupal\Component\Assertion\" />
@@ -37,8 +38,11 @@
       <sourceFolder url="file://$MODULE_DIR$/web/core/tests/PHPStan/../Drupal/Tests" isTestSource="false" packagePrefix="Drupal\Tests\" />
       <sourceFolder url="file://$MODULE_DIR$/web/core/tests/PHPStan/Rules" isTestSource="false" packagePrefix="Drupal\PHPStan\Rules\" />
       <sourceFolder url="file://$MODULE_DIR$/web/core/tests/PHPStan/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/web/modules/contrib/jsonapi_extras/modules/jsonapi_defaults/tests/src" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/web/modules/contrib/jsonapi_extras/tests/src" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/asm89/stack-cors" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/chi-teck/drupal-code-generator" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/commerceguys/addressing" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/consolidation/annotated-command" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/consolidation/config" />
@@ -49,21 +53,35 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/consolidation/site-alias" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/consolidation/site-process" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/dflydev/dot-access-data" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/collections" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/common" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/deprecations" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/event-manager" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/lexer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/persistence" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/drupal/core-composer-scaffold" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/drupal/core-project-message" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/drupal/core-recipe-unpack" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/drupal/rat" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/drush/drush" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/e0ipso/shaper" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/egulias/email-validator" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/grasmash/expander" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/grasmash/yaml-cli" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/guzzlehttp/guzzle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/guzzlehttp/promises" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/guzzlehttp/psr7" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/justinrainbow/json-schema" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/prompts" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/league/commonmark" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/league/config" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/league/container" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/league/csv" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/marc-mabe/php-enum" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/masterminds/html5" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/mck89/peast" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/nette/schema" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/nette/utils" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/nikic/php-parser" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/pear/archive_tar" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/pear/console_getopt" />
@@ -73,6 +91,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/phootwork/lang" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/php-tuf/composer-stager" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/phpowermove/docblock" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/psr/cache" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/psr/container" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/psr/event-dispatcher" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/psr/http-client" />
@@ -83,16 +102,21 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/ralouphie/getallheaders" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/revolt/event-loop" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/diff" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/simshaun/recurr" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/cache-contracts" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/console" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/dependency-injection" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/deprecation-contracts" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/error-handler" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/event-dispatcher" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/event-dispatcher-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/expression-language" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/filesystem" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/finder" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/http-foundation" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/http-kernel" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/intl" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/mailer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/mime" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-ctype" />
@@ -101,6 +125,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-intl-idn" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-intl-normalizer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-mbstring" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-php80" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-php81" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-php83" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-php84" />
@@ -117,6 +142,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/var-exporter" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/yaml" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/twig/twig" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/wikimedia/composer-merge-plugin" />
       <excludeFolder url="file://$MODULE_DIR$/web/core/modules/package_manager/tests/fixtures/fake_site/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/web/core/modules/package_manager/tests/fixtures/fake_site/vendor/drupal/core" />
       <excludeFolder url="file://$MODULE_DIR$/web/core/modules/package_manager/tests/fixtures/fake_site/vendor/drupal/core-dev" />
