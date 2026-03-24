@@ -24,6 +24,7 @@
         "drupal/devel": "^5.5",
         "drupal/gin": "^5.0",
         "drupal/schemadotorg": "^1.0@alpha",
+        "drupal/search_api": "^1.40",
         "drush/drush": "^13.7",
         "wikimedia/composer-merge-plugin": "^2.1"
     },
