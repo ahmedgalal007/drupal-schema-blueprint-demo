@@ -28,8 +28,8 @@ class LayoutParagraphsBuilderAccess implements AccessInterface {
    * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
    *   The entity type manager service.
    */
-  public function __construct(EntityTypeManagerInterface $entity_type_manager) {
-    $this->entityTypeManager = $entity_type_manager;
+  public function __construct(?EntityTypeManagerInterface $entity_type_manager) {
+    $this->entityTypeManager = $entity_type_manager ?? [];
   }
 
   /**
@@ -52,25 +52,25 @@ class LayoutParagraphsBuilderAccess implements AccessInterface {
   public function access(
     AccountInterface $account,
     LayoutParagraphsLayout $layout_paragraphs_layout,
-    ?string $operation,
-    ?string $component_uuid,
-    ?ParagraphsTypeInterface $paragraph_type
+    string $operation,
+    string $component_uuid = "",
+    ?ParagraphsTypeInterface $paragraph_type = null,
   ) {
 
     // Check field access.
-    $access = $layout_paragraphs_layout->getParagraphsReferenceField()->access('edit', $account, TRUE);
+    $access = $layout_paragraphs_layout?->getParagraphsReferenceField()?->access('edit', $account, TRUE) ?? false;
 
     // Check access to host entity.
-    $entity = $layout_paragraphs_layout->getEntity();
-    $lp_operation = $entity->isNew() ? 'create' : 'update';
-    $access = $access->andIf($entity->access($lp_operation, $account, TRUE));
+    $entity = $layout_paragraphs_layout?->getEntity();
+    $lp_operation = $entity?->isNew() ?? true ? 'create' : 'update';
+    $access = $access?->andIf($entity?->access($lp_operation, $account, TRUE));
 
     // Check access to specific paragraph entity.
     if ($component_uuid) {
       $paragraph = $layout_paragraphs_layout
-        ->getComponentByUuid($component_uuid)
-        ->getEntity();
-      $access = $access->andIf($paragraph->access($operation, $account, TRUE));
+        ?->getComponentByUuid($component_uuid ?? "")
+        ?->getEntity();
+      $access = $access?->andIf($paragraph?->access($operation, $account ?? [] , TRUE) ?? []) ?? [];
     }
 
     // Check access to paragraph type.
