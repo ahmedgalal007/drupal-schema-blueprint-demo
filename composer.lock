@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fbb81df021e39363f3893b937db9a9d9",
+    "content-hash": "26e4f2ade248df39ee3b761fad3177bb",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2740,6 +2740,83 @@
             }
         },
         {
+            "name": "drupal/default_content",
+            "version": "2.0.0-beta1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/default_content.git",
+                "reference": "2.0.0-beta1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/default_content-2.0.0-beta1.zip",
+                "reference": "2.0.0-beta1",
+                "shasum": "c39aa30fa961854edbe318c0d43e2f3898658047"
+            },
+            "require": {
+                "drupal/core": "^9.1 || ^10 || ^11"
+            },
+            "require-dev": {
+                "drupal/hal": "^1 || ^2",
+                "drupal/paragraphs": "^1"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0-beta1",
+                    "datestamp": "1768258043",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9 || ^10 || ^11 || ^12"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "andypost",
+                    "homepage": "https://www.drupal.org/user/118908"
+                },
+                {
+                    "name": "benjy",
+                    "homepage": "https://www.drupal.org/user/1852732"
+                },
+                {
+                    "name": "berdir",
+                    "homepage": "https://www.drupal.org/user/214652"
+                },
+                {
+                    "name": "dawehner",
+                    "homepage": "https://www.drupal.org/user/99340"
+                },
+                {
+                    "name": "jibran",
+                    "homepage": "https://www.drupal.org/user/1198144"
+                },
+                {
+                    "name": "larowlan",
+                    "homepage": "https://www.drupal.org/user/395439"
+                },
+                {
+                    "name": "sam152",
+                    "homepage": "https://www.drupal.org/user/1485048"
+                }
+            ],
+            "description": "Imports default content when a module is enabled",
+            "homepage": "https://www.drupal.org/project/default_content",
+            "support": {
+                "source": "https://git.drupalcode.org/project/default_content"
+            }
+        },
+        {
             "name": "drupal/devel",
             "version": "5.5.0",
             "source": {
@@ -3345,6 +3422,73 @@
             "homepage": "https://www.drupal.org/project/epp",
             "support": {
                 "source": "https://git.drupalcode.org/project/epp"
+            }
+        },
+        {
+            "name": "drupal/eva",
+            "version": "3.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/eva.git",
+                "reference": "3.1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/eva-3.1.1.zip",
+                "reference": "3.1.1",
+                "shasum": "11df2285cc479033637b9aac2fe65f681e5ed38b"
+            },
+            "require": {
+                "drupal/core": "^9.5.11 || ^10 || ^11"
+            },
+            "suggest": {
+                "drupal/token": "Enable the argument token browser"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.1.1",
+                    "datestamp": "1769857067",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "ahebrank",
+                    "homepage": "https://www.drupal.org/user/3190515"
+                },
+                {
+                    "name": "Crell",
+                    "homepage": "https://www.drupal.org/user/26398"
+                },
+                {
+                    "name": "eaton",
+                    "homepage": "https://www.drupal.org/user/16496"
+                },
+                {
+                    "name": "geek-merlin",
+                    "homepage": "https://www.drupal.org/user/229048"
+                },
+                {
+                    "name": "mkadin",
+                    "homepage": "https://www.drupal.org/user/1093166"
+                },
+                {
+                    "name": "vitaliyb98",
+                    "homepage": "https://www.drupal.org/user/3514011"
+                }
+            ],
+            "description": "Attach a view to an entity",
+            "homepage": "https://www.drupal.org/project/eva",
+            "support": {
+                "source": "https://git.drupalcode.org/project/eva"
             }
         },
         {
@@ -4788,6 +4932,122 @@
             }
         },
         {
+            "name": "drupal/podcast",
+            "version": "1.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/podcast.git",
+                "reference": "8.x-1.10"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/podcast-8.x-1.10.zip",
+                "reference": "8.x-1.10",
+                "shasum": "ba2dead70eea3a0d749b303f7da3c67bc8912af2"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10 || ^11",
+                "drupal/select_or_other": "^4.1"
+            },
+            "require-dev": {
+                "composer/installers": "^1",
+                "cweagans/composer-patches": "^1.7",
+                "drush/drush": "^12 || ^13"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.10",
+                    "datestamp": "1734725474",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "installer-paths": {
+                    "web/core": [
+                        "type:drupal-core"
+                    ],
+                    "web/libraries/{$name}": [
+                        "type:drupal-library"
+                    ],
+                    "web/modules/contrib/{$name}": [
+                        "type:drupal-module"
+                    ],
+                    "web/profiles/{$name}": [
+                        "type:drupal-profile"
+                    ],
+                    "web/themes/{$name}": [
+                        "type:drupal-theme"
+                    ],
+                    "drush/{$name}": [
+                        "type:drupal-drush"
+                    ]
+                },
+                "drupal-scaffold": {
+                    "locations": {
+                        "web-root": "web/"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "scripts": {
+                "si": [
+                    "drush si -v --db-url=${SIMPLETEST_DB:-mysql://root:password@mariadb/db}"
+                ],
+                "phpcs": [
+                    "phpcs --runtime-set ignore_warnings_on_exit 1 --runtime-set ignore_errors_on_exit 1 web/modules/custom"
+                ],
+                "lint": [
+                    "parallel-lint --exclude web --exclude vendor ."
+                ],
+                "webserver": [
+                    "cd web && php -S 0.0.0.0:8888 .ht.router.php"
+                ],
+                "chromedriver": [
+                    "chromedriver --port=9515 --verbose --whitelisted-ips --log-path=/tmp/chromedriver.log --no-sandbox"
+                ],
+                "unit": [
+                    "phpunit --verbose web/modules/custom"
+                ],
+                "phpstan": [
+                    "phpstan analyse web/modules/custom"
+                ],
+                "stylelint": [
+                    "yarn --silent --cwd web/core stylelint --formatter verbose --config ./.stylelintrc.json ../modules/custom/**/*.css"
+                ],
+                "eslint": [
+                    "yarn --silent --cwd web/core eslint -c ./.eslintrc.json ../modules/custom"
+                ],
+                "post-update-cmd": [
+                    "Spoons\\ScriptHandler::createSymlinks"
+                ]
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "e0ipso",
+                    "homepage": "https://www.drupal.org/user/550110"
+                },
+                {
+                    "name": "pcambra",
+                    "homepage": "https://www.drupal.org/user/122101"
+                },
+                {
+                    "name": "rodrigoaguilera",
+                    "homepage": "https://www.drupal.org/user/408170"
+                }
+            ],
+            "description": "Allows creating podcasts using views",
+            "homepage": "https://www.drupal.org/project/podcast",
+            "support": {
+                "source": "https://git.drupalcode.org/project/podcast",
+                "issues": "https://www.drupal.org/project/issues/podcast"
+            }
+        },
+        {
             "name": "drupal/rat",
             "version": "1.0.1",
             "source": {
@@ -5007,6 +5267,851 @@
             }
         },
         {
+            "name": "drupal/schemadotorg_additional_type",
+            "version": "1.0.0-alpha37",
+            "require": {
+                "drupal/core": "^10.3 || ^11",
+                "drupal/schemadotorg": "*"
+            },
+            "type": "metapackage",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0-alpha37",
+                    "datestamp": "1772716807",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "fathershawn",
+                    "homepage": "https://www.drupal.org/user/628748"
+                },
+                {
+                    "name": "jrockowitz",
+                    "homepage": "https://www.drupal.org/user/371407"
+                }
+            ],
+            "description": "Enhances the Schema.org additional type property to allow additional type specificity without having to create dedicated entity types for every appropriate Schema.org type.",
+            "homepage": "https://www.drupal.org/project/schemadotorg",
+            "support": {
+                "source": "https://git.drupalcode.org/project/schemadotorg"
+            }
+        },
+        {
+            "name": "drupal/schemadotorg_auto_entitylabel",
+            "version": "1.0.0-alpha37",
+            "require": {
+                "drupal/auto_entitylabel": "*",
+                "drupal/core": "^10.3 || ^11",
+                "drupal/schemadotorg": "*"
+            },
+            "type": "metapackage",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0-alpha37",
+                    "datestamp": "1772716807",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "fathershawn",
+                    "homepage": "https://www.drupal.org/user/628748"
+                },
+                {
+                    "name": "jrockowitz",
+                    "homepage": "https://www.drupal.org/user/371407"
+                }
+            ],
+            "description": "Creates automatic entity label settings for Schema.org types.",
+            "homepage": "https://www.drupal.org/project/schemadotorg",
+            "support": {
+                "source": "https://git.drupalcode.org/project/schemadotorg"
+            }
+        },
+        {
+            "name": "drupal/schemadotorg_cer",
+            "version": "1.0.0-alpha37",
+            "require": {
+                "drupal/cer": "*",
+                "drupal/core": "^10.3 || ^11",
+                "drupal/schemadotorg": "*"
+            },
+            "type": "metapackage",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0-alpha37",
+                    "datestamp": "1772716807",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "fathershawn",
+                    "homepage": "https://www.drupal.org/user/628748"
+                },
+                {
+                    "name": "jrockowitz",
+                    "homepage": "https://www.drupal.org/user/371407"
+                }
+            ],
+            "description": "Improves https://inverseOf support using the Corresponding Entity References module.",
+            "homepage": "https://www.drupal.org/project/schemadotorg",
+            "support": {
+                "source": "https://git.drupalcode.org/project/schemadotorg"
+            }
+        },
+        {
+            "name": "drupal/schemadotorg_custom_field",
+            "version": "1.0.0-alpha37",
+            "require": {
+                "drupal/core": "^10.3 || ^11",
+                "drupal/custom_field": "*",
+                "drupal/schemadotorg": "*"
+            },
+            "type": "metapackage",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0-alpha37",
+                    "datestamp": "1772716807",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "fathershawn",
+                    "homepage": "https://www.drupal.org/user/628748"
+                },
+                {
+                    "name": "jrockowitz",
+                    "homepage": "https://www.drupal.org/user/371407"
+                }
+            ],
+            "description": "Allows a Custom field to be used to create Schema.org relationships within an entity type/bundle Schema.org mapping.",
+            "homepage": "https://www.drupal.org/project/schemadotorg",
+            "support": {
+                "source": "https://git.drupalcode.org/project/schemadotorg"
+            }
+        },
+        {
+            "name": "drupal/schemadotorg_diagram",
+            "version": "1.0.0-alpha37",
+            "require": {
+                "drupal/core": "^10.3 || ^11",
+                "drupal/schemadotorg": "*"
+            },
+            "type": "metapackage",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0-alpha37",
+                    "datestamp": "1772716807",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "fathershawn",
+                    "homepage": "https://www.drupal.org/user/628748"
+                },
+                {
+                    "name": "jrockowitz",
+                    "homepage": "https://www.drupal.org/user/371407"
+                }
+            ],
+            "description": "Provides diagrams for Schema.org relationships.",
+            "homepage": "https://www.drupal.org/project/schemadotorg",
+            "support": {
+                "source": "https://git.drupalcode.org/project/schemadotorg"
+            }
+        },
+        {
+            "name": "drupal/schemadotorg_entity_reference_override",
+            "version": "1.0.0-alpha37",
+            "require": {
+                "drupal/core": "^10.3 || ^11",
+                "drupal/entity_reference_override": "*",
+                "drupal/schemadotorg": "*"
+            },
+            "type": "metapackage",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0-alpha37",
+                    "datestamp": "1772716807",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "fathershawn",
+                    "homepage": "https://www.drupal.org/user/628748"
+                },
+                {
+                    "name": "jrockowitz",
+                    "homepage": "https://www.drupal.org/user/371407"
+                }
+            ],
+            "description": "Integrates the Entity Reference Override field to add a https://schema.org/Role to entity references.",
+            "homepage": "https://www.drupal.org/project/schemadotorg",
+            "support": {
+                "source": "https://git.drupalcode.org/project/schemadotorg"
+            }
+        },
+        {
+            "name": "drupal/schemadotorg_epp",
+            "version": "1.0.0-alpha37",
+            "require": {
+                "drupal/core": "^10.3 || ^11",
+                "drupal/epp": "*",
+                "drupal/schemadotorg": "*",
+                "drupal/schemadotorg_node": "*"
+            },
+            "type": "metapackage",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0-alpha37",
+                    "datestamp": "1772716807",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "fathershawn",
+                    "homepage": "https://www.drupal.org/user/628748"
+                },
+                {
+                    "name": "jrockowitz",
+                    "homepage": "https://www.drupal.org/user/371407"
+                }
+            ],
+            "description": "Configures and manages entity prepopulation for Schema.org relationships (i.e. entity references).",
+            "homepage": "https://www.drupal.org/project/schemadotorg",
+            "support": {
+                "source": "https://git.drupalcode.org/project/schemadotorg"
+            }
+        },
+        {
+            "name": "drupal/schemadotorg_media",
+            "version": "1.0.0-alpha37",
+            "require": {
+                "drupal/core": "^10.3 || ^11",
+                "drupal/schemadotorg": "*"
+            },
+            "type": "metapackage",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0-alpha37",
+                    "datestamp": "1772716807",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "fathershawn",
+                    "homepage": "https://www.drupal.org/user/628748"
+                },
+                {
+                    "name": "jrockowitz",
+                    "homepage": "https://www.drupal.org/user/371407"
+                }
+            ],
+            "description": "Integrates the Media and Media Library module with the Schema.org Blueprints module.",
+            "homepage": "https://www.drupal.org/project/schemadotorg",
+            "support": {
+                "source": "https://git.drupalcode.org/project/schemadotorg"
+            }
+        },
+        {
+            "name": "drupal/schemadotorg_node",
+            "version": "1.0.0-alpha37",
+            "require": {
+                "drupal/core": "^10.3 || ^11",
+                "drupal/schemadotorg": "*"
+            },
+            "type": "metapackage",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0-alpha37",
+                    "datestamp": "1772716807",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "fathershawn",
+                    "homepage": "https://www.drupal.org/user/628748"
+                },
+                {
+                    "name": "jrockowitz",
+                    "homepage": "https://www.drupal.org/user/371407"
+                }
+            ],
+            "description": "Enhances content type integration with the Schema.org Blueprints module.",
+            "homepage": "https://www.drupal.org/project/schemadotorg",
+            "support": {
+                "source": "https://git.drupalcode.org/project/schemadotorg"
+            }
+        },
+        {
+            "name": "drupal/schemadotorg_options",
+            "version": "1.0.0-alpha37",
+            "require": {
+                "drupal/core": "^10.3 || ^11",
+                "drupal/schemadotorg": "*"
+            },
+            "type": "metapackage",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0-alpha37",
+                    "datestamp": "1772716807",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "fathershawn",
+                    "homepage": "https://www.drupal.org/user/628748"
+                },
+                {
+                    "name": "jrockowitz",
+                    "homepage": "https://www.drupal.org/user/371407"
+                }
+            ],
+            "description": "Set allowed values for list (options) fields.",
+            "homepage": "https://www.drupal.org/project/schemadotorg",
+            "support": {
+                "source": "https://git.drupalcode.org/project/schemadotorg"
+            }
+        },
+        {
+            "name": "drupal/schemadotorg_paragraphs",
+            "version": "1.0.0-alpha37",
+            "require": {
+                "drupal/core": "^10.3 || ^11",
+                "drupal/paragraphs": "*",
+                "drupal/schemadotorg": "*"
+            },
+            "type": "metapackage",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0-alpha37",
+                    "datestamp": "1772716807",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "fathershawn",
+                    "homepage": "https://www.drupal.org/user/628748"
+                },
+                {
+                    "name": "jrockowitz",
+                    "homepage": "https://www.drupal.org/user/371407"
+                }
+            ],
+            "description": "Integrates the Paragraphs and Paragraphs Library module with the Schema.org Blueprints module.",
+            "homepage": "https://www.drupal.org/project/schemadotorg",
+            "support": {
+                "source": "https://git.drupalcode.org/project/schemadotorg"
+            }
+        },
+        {
+            "name": "drupal/schemadotorg_pathauto",
+            "version": "1.0.0-alpha37",
+            "require": {
+                "drupal/core": "^10.3 || ^11",
+                "drupal/pathauto": "*",
+                "drupal/schemadotorg": "*"
+            },
+            "type": "metapackage",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0-alpha37",
+                    "datestamp": "1772716807",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "fathershawn",
+                    "homepage": "https://www.drupal.org/user/628748"
+                },
+                {
+                    "name": "jrockowitz",
+                    "homepage": "https://www.drupal.org/user/371407"
+                }
+            ],
+            "description": "Automatically enables URL aliases (via pathauto) for Schema.org types.",
+            "homepage": "https://www.drupal.org/project/schemadotorg",
+            "support": {
+                "source": "https://git.drupalcode.org/project/schemadotorg"
+            }
+        },
+        {
+            "name": "drupal/schemadotorg_role",
+            "version": "1.0.0-alpha37",
+            "require": {
+                "drupal/core": "^10.3 || ^11",
+                "drupal/schemadotorg": "*"
+            },
+            "type": "metapackage",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0-alpha37",
+                    "datestamp": "1772716807",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "fathershawn",
+                    "homepage": "https://www.drupal.org/user/628748"
+                },
+                {
+                    "name": "jrockowitz",
+                    "homepage": "https://www.drupal.org/user/371407"
+                }
+            ],
+            "description": "Manages roles (https://schema.org/Role) for Schema.org properties.",
+            "homepage": "https://www.drupal.org/project/schemadotorg",
+            "support": {
+                "source": "https://git.drupalcode.org/project/schemadotorg"
+            }
+        },
+        {
+            "name": "drupal/schemadotorg_starterkit",
+            "version": "1.0.0-alpha37",
+            "require": {
+                "drupal/core": "^10.3 || ^11",
+                "drupal/schemadotorg": "*"
+            },
+            "type": "metapackage",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0-alpha37",
+                    "datestamp": "1772716807",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "fathershawn",
+                    "homepage": "https://www.drupal.org/user/628748"
+                },
+                {
+                    "name": "jrockowitz",
+                    "homepage": "https://www.drupal.org/user/371407"
+                }
+            ],
+            "description": "Provides an API for starter kits to create Schema.org types.",
+            "homepage": "https://www.drupal.org/project/schemadotorg",
+            "support": {
+                "source": "https://git.drupalcode.org/project/schemadotorg"
+            }
+        },
+        {
+            "name": "drupal/schemadotorg_starterkit_hotel",
+            "version": "1.0.0-alpha37",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/schemadotorg_starterkit_hotel.git",
+                "reference": "1.0.0-alpha37"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/schemadotorg_starterkit_hotel-1.0.0-alpha37.zip",
+                "reference": "1.0.0-alpha37",
+                "shasum": "2e0e6c116f07d459f54c452460aacf966b83fcf6"
+            },
+            "require": {
+                "drupal/auto_entitylabel": "^3.0",
+                "drupal/cer": "^5.0",
+                "drupal/config_rewrite": "^1.0",
+                "drupal/core": "^10.3 || ^11",
+                "drupal/entity_reference_override": "^2.0",
+                "drupal/epp": "^1.0",
+                "drupal/paragraphs": "^1.0",
+                "drupal/pathauto": "^1.0",
+                "drupal/schemadotorg": "^1.0",
+                "drupal/schemadotorg_auto_entitylabel": "*",
+                "drupal/schemadotorg_cer": "*",
+                "drupal/schemadotorg_diagram": "*",
+                "drupal/schemadotorg_epp": "*",
+                "drupal/schemadotorg_media": "*",
+                "drupal/schemadotorg_node": "*",
+                "drupal/schemadotorg_options": "*",
+                "drupal/schemadotorg_paragraphs": "*",
+                "drupal/schemadotorg_pathauto": "*",
+                "drupal/schemadotorg_role": "*",
+                "drupal/schemadotorg_starterkit": "*",
+                "drupal/schemadotorg_taxonomy": "*",
+                "drupal/token": "^1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0-alpha37",
+                    "datestamp": "1772717165",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "jrockowitz",
+                    "homepage": "https://www.drupal.org/user/371407"
+                }
+            ],
+            "description": "A starter kit that creates a Schema.org Hotel type with views.",
+            "homepage": "https://www.drupal.org/project/schemadotorg_starterkit_hotel",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/schemadotorg_starterkit_hotel",
+                "issues": "https://www.drupal.org/project/issues/schemadotorg_starterkit_hotel"
+            }
+        },
+        {
+            "name": "drupal/schemadotorg_starterkit_organization",
+            "version": "1.0.0-alpha37",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/schemadotorg_starterkit_organization.git",
+                "reference": "1.0.0-alpha37"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/schemadotorg_starterkit_organization-1.0.0-alpha37.zip",
+                "reference": "1.0.0-alpha37",
+                "shasum": "ac3f1ec08bd31239350c45c4f3e81dea1f6a4aae"
+            },
+            "require": {
+                "drupal/auto_entitylabel": "^3.0",
+                "drupal/cer": "^5.0",
+                "drupal/config_rewrite": "^1.0",
+                "drupal/core": "^10.3 || ^11",
+                "drupal/custom_field": "^3.0 || ^4.0",
+                "drupal/entity_reference_override": "^2.0",
+                "drupal/epp": "^1.0",
+                "drupal/pathauto": "^1.0",
+                "drupal/schemadotorg": "^1.0",
+                "drupal/schemadotorg_additional_type": "*",
+                "drupal/schemadotorg_auto_entitylabel": "*",
+                "drupal/schemadotorg_cer": "*",
+                "drupal/schemadotorg_custom_field": "*",
+                "drupal/schemadotorg_diagram": "*",
+                "drupal/schemadotorg_entity_reference_override": "*",
+                "drupal/schemadotorg_epp": "*",
+                "drupal/schemadotorg_node": "*",
+                "drupal/schemadotorg_pathauto": "*",
+                "drupal/schemadotorg_starterkit": "*",
+                "drupal/token": "^1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0-alpha37",
+                    "datestamp": "1772717185",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "fathershawn",
+                    "homepage": "https://www.drupal.org/user/628748"
+                },
+                {
+                    "name": "jrockowitz",
+                    "homepage": "https://www.drupal.org/user/371407"
+                }
+            ],
+            "description": "A starter kit that creates Schema.org Organization and LocalBusiness types with views.",
+            "homepage": "https://www.drupal.org/project/schemadotorg_starterkit_organization",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/schemadotorg_starterkit_organization",
+                "issues": "https://www.drupal.org/project/issues/schemadotorg_starterkit_organization"
+            }
+        },
+        {
+            "name": "drupal/schemadotorg_starterkit_podcast",
+            "version": "1.0.0-alpha37",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/schemadotorg_starterkit_podcast.git",
+                "reference": "1.0.0-alpha37"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/schemadotorg_starterkit_podcast-1.0.0-alpha37.zip",
+                "reference": "1.0.0-alpha37",
+                "shasum": "f1a291a315c7e547a2a7e23caf9dd800ce50ffb3"
+            },
+            "require": {
+                "drupal/auto_entitylabel": "^3.0",
+                "drupal/config_rewrite": "^1.0",
+                "drupal/core": "^10.3 || ^11",
+                "drupal/epp": "^1.0",
+                "drupal/eva": "^3.0",
+                "drupal/pathauto": "^1.0",
+                "drupal/podcast": "^1.0",
+                "drupal/schemadotorg": "^1.0",
+                "drupal/schemadotorg_node": "*",
+                "drupal/schemadotorg_pathauto": "*",
+                "drupal/schemadotorg_starterkit": "*",
+                "drupal/token": "^1.0",
+                "drupal/views_add_button": "^2.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0-alpha37",
+                    "datestamp": "1772717175",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "fathershawn",
+                    "homepage": "https://www.drupal.org/user/628748"
+                },
+                {
+                    "name": "jrockowitz",
+                    "homepage": "https://www.drupal.org/user/371407"
+                }
+            ],
+            "description": "A starter kit that creates Schema.org PodcastSeries and PodcastEpisode types with views and RSS feeds.",
+            "homepage": "https://www.drupal.org/project/schemadotorg_starterkit_podcasts",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/schemadotorg_starterkit_podcasts",
+                "issues": "https://www.drupal.org/project/issues/schemadotorg_starterkit_podcasts"
+            }
+        },
+        {
+            "name": "drupal/schemadotorg_starterkit_recipes",
+            "version": "1.0.0-alpha37",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/schemadotorg_starterkit_recipes.git",
+                "reference": "1.0.0-alpha37"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/schemadotorg_starterkit_recipes-1.0.0-alpha37.zip",
+                "reference": "1.0.0-alpha37",
+                "shasum": "ae2b8681983d7e9e0ab4b0a488cd9493b8b7ce46"
+            },
+            "require": {
+                "drupal/config_rewrite": "^1.0",
+                "drupal/core": "^10.3 || ^11",
+                "drupal/custom_field": "^3.0 || ^4.0",
+                "drupal/default_content": "^2.0",
+                "drupal/pathauto": "^1.0",
+                "drupal/schemadotorg": "^1.0",
+                "drupal/schemadotorg_custom_field": "*",
+                "drupal/schemadotorg_node": "*",
+                "drupal/schemadotorg_options": "*",
+                "drupal/schemadotorg_pathauto": "*",
+                "drupal/schemadotorg_starterkit": "*",
+                "drupal/schemadotorg_taxonomy": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0-alpha37",
+                    "datestamp": "1772717177",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "fathershawn",
+                    "homepage": "https://www.drupal.org/user/628748"
+                },
+                {
+                    "name": "jrockowitz",
+                    "homepage": "https://www.drupal.org/user/371407"
+                }
+            ],
+            "description": "A starter kit that creates a Schema.org Recipe type with a Recipes view.",
+            "homepage": "https://www.drupal.org/project/schemadotorg_starterkit_recipes",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/schemadotorg_starterkit_recipes",
+                "issues": "https://www.drupal.org/project/issues/schemadotorg_starterkit_recipes"
+            }
+        },
+        {
+            "name": "drupal/schemadotorg_taxonomy",
+            "version": "1.0.0-alpha37",
+            "require": {
+                "drupal/core": "^10.3 || ^11",
+                "drupal/schemadotorg": "*"
+            },
+            "type": "metapackage",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0-alpha37",
+                    "datestamp": "1772716807",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "fathershawn",
+                    "homepage": "https://www.drupal.org/user/628748"
+                },
+                {
+                    "name": "jrockowitz",
+                    "homepage": "https://www.drupal.org/user/371407"
+                }
+            ],
+            "description": "Assists with creating and mapping taxonomy vocabularies and terms.",
+            "homepage": "https://www.drupal.org/project/schemadotorg",
+            "support": {
+                "source": "https://git.drupalcode.org/project/schemadotorg"
+            }
+        },
+        {
             "name": "drupal/search_api",
             "version": "1.40.0",
             "source": {
@@ -5075,6 +6180,78 @@
                 "source": "https://git.drupalcode.org/project/search_api",
                 "issues": "https://www.drupal.org/project/issues/search_api",
                 "irc": "irc://irc.freenode.org/drupal-search-api"
+            }
+        },
+        {
+            "name": "drupal/select_or_other",
+            "version": "4.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/select_or_other.git",
+                "reference": "4.2.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/select_or_other-4.2.2.zip",
+                "reference": "4.2.2",
+                "shasum": "0f021e17530aa96c72d63d0b774741ab0f1f62df"
+            },
+            "require": {
+                "drupal/core": "^10.1 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "4.2.2",
+                    "datestamp": "1763272032",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "daften",
+                    "homepage": "https://www.drupal.org/user/176274"
+                },
+                {
+                    "name": "danielb",
+                    "homepage": "https://www.drupal.org/user/134005"
+                },
+                {
+                    "name": "haydeniv",
+                    "homepage": "https://www.drupal.org/user/149501"
+                },
+                {
+                    "name": "hmendes",
+                    "homepage": "https://www.drupal.org/user/3673677"
+                },
+                {
+                    "name": "ivnish",
+                    "homepage": "https://www.drupal.org/user/3547706"
+                },
+                {
+                    "name": "legolasbo",
+                    "homepage": "https://www.drupal.org/user/2480548"
+                },
+                {
+                    "name": "qzmenko",
+                    "homepage": "https://www.drupal.org/user/3220037"
+                },
+                {
+                    "name": "vladbo",
+                    "homepage": "https://www.drupal.org/user/2696261"
+                }
+            ],
+            "description": "Provides a select box form element with additional option 'Other' to give a textfield.",
+            "homepage": "https://www.drupal.org/project/select_or_other",
+            "support": {
+                "source": "https://git.drupalcode.org/project/select_or_other"
             }
         },
         {
@@ -5388,6 +6565,60 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/type_tray",
                 "issues": "http://drupal.org/project/issues/type_tray"
+            }
+        },
+        {
+            "name": "drupal/views_add_button",
+            "version": "2.0.9-beta2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/views_add_button.git",
+                "reference": "2.0.9-beta2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/views_add_button-2.0.9-beta2.zip",
+                "reference": "2.0.9-beta2",
+                "shasum": "227a7f5350154fddcccd9c28b7ab499d371cfb9a"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10 || ^11",
+                "drupal/token": "^1.15"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.9-beta2",
+                    "datestamp": "1763825668",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "laboratory.mike",
+                    "homepage": "https://www.drupal.org/user/131390"
+                },
+                {
+                    "name": "Shawn2516",
+                    "homepage": "https://www.drupal.org/user/3154563"
+                },
+                {
+                    "name": "terry_kolodiy",
+                    "homepage": "https://www.drupal.org/user/3679622"
+                }
+            ],
+            "description": "Views Add Button",
+            "homepage": "https://www.drupal.org/project/views_add_button",
+            "support": {
+                "source": "https://git.drupalcode.org/project/views_add_button",
+                "issues": "https://www.drupal.org/project/issues/search/views_add_button"
             }
         },
         {
@@ -6236,16 +7467,16 @@
         },
         {
             "name": "laravel/prompts",
-            "version": "v0.3.15",
+            "version": "v0.3.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/prompts.git",
-                "reference": "4bb8107ec97651fd3f17f897d6489dbc4d8fb999"
+                "reference": "11e7d5f93803a2190b00e145142cb00a33d17ad2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/prompts/zipball/4bb8107ec97651fd3f17f897d6489dbc4d8fb999",
-                "reference": "4bb8107ec97651fd3f17f897d6489dbc4d8fb999",
+                "url": "https://api.github.com/repos/laravel/prompts/zipball/11e7d5f93803a2190b00e145142cb00a33d17ad2",
+                "reference": "11e7d5f93803a2190b00e145142cb00a33d17ad2",
                 "shasum": ""
             },
             "require": {
@@ -6289,9 +7520,9 @@
             "description": "Add beautiful and user-friendly forms to your command-line applications.",
             "support": {
                 "issues": "https://github.com/laravel/prompts/issues",
-                "source": "https://github.com/laravel/prompts/tree/v0.3.15"
+                "source": "https://github.com/laravel/prompts/tree/v0.3.16"
             },
-            "time": "2026-03-17T13:45:17+00:00"
+            "time": "2026-03-23T14:35:33+00:00"
         },
         {
             "name": "league/commonmark",
@@ -11555,7 +12786,11 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "drupal/schemadotorg": 15
+        "drupal/schemadotorg": 15,
+        "drupal/schemadotorg_starterkit_hotel": 15,
+        "drupal/schemadotorg_starterkit_organization": 15,
+        "drupal/schemadotorg_starterkit_podcast": 15,
+        "drupal/schemadotorg_starterkit_recipes": 15
     },
     "prefer-stable": true,
     "prefer-lowest": false,

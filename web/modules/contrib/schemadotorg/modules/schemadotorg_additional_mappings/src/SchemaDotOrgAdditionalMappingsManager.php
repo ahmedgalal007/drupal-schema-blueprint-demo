@@ -408,7 +408,7 @@ class SchemaDotOrgAdditionalMappingsManager implements SchemaDotOrgAdditionalMap
   public function getDefaultAdditionalMappings(string $entity_type_id, ?string $bundle, string $schema_type): array {
     $default_additional_mappings = $this->configFactory
       ->get('schemadotorg_additional_mappings.settings')
-      ->get('default_additional_mappings');
+      ->get('default_additional_mappings') ?? [];
     $parts = [
       'entity_type_id' => $entity_type_id,
       'bundle' => $bundle,
@@ -467,7 +467,7 @@ class SchemaDotOrgAdditionalMappingsManager implements SchemaDotOrgAdditionalMap
   protected function getDefaultProperties(string $schema_type, string $additional_schema_type): array {
     $default_properties = $this->configFactory
       ->get('schemadotorg_additional_mappings.settings')
-      ->get('default_properties');
+      ->get('default_properties') ?? [];
     $properties = $default_properties["$schema_type--$additional_schema_type"]
       ?? $default_properties[$additional_schema_type]
       ?? NULL;

@@ -647,7 +647,7 @@ AdditionalType: Additional Type
 
     $use_snake_case = $this->configFactory
       ->get('schemadotorg_additional_type.settings')
-      ->get('use_snake_case');
+      ->get('use_snake_case') ?? [];
     $allowed_values = $this->schemaTypeManager->getAllTypeChildrenAsOptions($schema_type);
     if (!$use_snake_case) {
       return $allowed_values;

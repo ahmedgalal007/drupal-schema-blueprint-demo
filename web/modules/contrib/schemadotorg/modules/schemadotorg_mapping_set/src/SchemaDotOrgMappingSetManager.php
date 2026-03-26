@@ -67,7 +67,7 @@ class SchemaDotOrgMappingSetManager implements SchemaDotOrgMappingSetManagerInte
   public function getTypes(string $name, bool $required = FALSE): array {
     $mapping_set = $this->configFactory
       ->get('schemadotorg_mapping_set.settings')
-      ->get("sets.$name");
+      ->get("sets.$name") ?? [];
     if (empty($mapping_set)) {
       return [];
     }

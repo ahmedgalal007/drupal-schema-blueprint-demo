@@ -315,7 +315,7 @@ class SchemaDotOrgLayoutParagraphsManager implements SchemaDotOrgLayoutParagraph
     // Add default paragraphs types to the target bundles.
     $default_paragraph_types = $this->configFactory
       ->get('schemadotorg_layout_paragraphs.settings')
-      ->get('default_paragraph_types');
+      ->get('default_paragraph_types') ?? [];
     if ($this->moduleHandler->moduleExists('layout_paragraphs_library')) {
       $default_paragraph_types[] = 'from_library';
     }
@@ -369,7 +369,7 @@ class SchemaDotOrgLayoutParagraphsManager implements SchemaDotOrgLayoutParagraph
   public function paragraphsTypeCreate(ParagraphsTypeInterface $paragraphs_type): void {
     $default_paragraph_types = $this->configFactory
       ->get('schemadotorg_layout_paragraphs.settings')
-      ->get('default_paragraph_types');
+      ->get('default_paragraph_types') ?? [];
     if (empty($default_paragraph_types)
       || !in_array($paragraphs_type->id(), $default_paragraph_types)) {
       return;
@@ -380,7 +380,7 @@ class SchemaDotOrgLayoutParagraphsManager implements SchemaDotOrgLayoutParagraph
     // Set layouts.
     $default_paragraph_layouts = $this->configFactory
       ->get('schemadotorg_layout_paragraphs.settings')
-      ->get('default_paragraph_layouts');
+      ->get('default_paragraph_layouts') ?? [];
     $available_layouts = $default_paragraph_layouts[$paragraphs_type->id()] ?? NULL;
     if ($available_layouts) {
       $behavior_plugins['layout_paragraphs'] = [
@@ -527,8 +527,8 @@ class SchemaDotOrgLayoutParagraphsManager implements SchemaDotOrgLayoutParagraph
 
     $default_types = $this->configFactory
       ->get('schemadotorg_layout_paragraphs.settings')
-      ->get('default_types');
-    return (in_array($schema_type, $default_types ?? []) || in_array($bundle, $default_types ?? []));
+      ->get('default_types') ?? [];
+    return (in_array($schema_type, $default_types) || in_array($bundle, $default_types ?? []));
   }
 
 }

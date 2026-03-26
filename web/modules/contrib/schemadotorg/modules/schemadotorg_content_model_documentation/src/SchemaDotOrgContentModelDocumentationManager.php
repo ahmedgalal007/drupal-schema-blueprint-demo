@@ -65,7 +65,7 @@ class SchemaDotOrgContentModelDocumentationManager implements SchemaDotOrgConten
    */
   public function mappingTypeInsert(SchemaDotOrgMappingTypeInterface $mapping_type): void {
     $config = $this->configFactory
-      ->getEditable('content_model_documentation.settings');
+      ->getEditable('content_model_documentation.settings') ?? [];
     $target_entity_type_id = $mapping_type->id();
     $documentable_entity = SchemaDotOrgContentModelDocumentationManagerInterface::DOCUMENTABLE_ENTITIES[$target_entity_type_id] ?? NULL;
     if ($documentable_entity) {
@@ -155,9 +155,9 @@ class SchemaDotOrgContentModelDocumentationManager implements SchemaDotOrgConten
    */
   protected function hasDocumentation(SchemaDotOrgMappingInterface $mapping): bool {
     $config = $this->configFactory
-      ->get('schemadotorg_content_model_documentation.settings');
+      ->get('schemadotorg_content_model_documentation.settings') ?? [];
 
-    $types = $config->get('types');
+    $types = $config->get('types') ?? [];
     $types = array_combine($types, $types);
     return (bool) $this->schemaTypeManager->getSetting($types, $mapping);
   }
@@ -168,7 +168,7 @@ class SchemaDotOrgContentModelDocumentationManager implements SchemaDotOrgConten
   public function openLinksInModal(): bool {
     return $this->configFactory
       ->get('schemadotorg_content_model_documentation.settings')
-      ->get('link_modal');
+      ->get('link_modal') ?? FALSE;
   }
 
   /**
@@ -201,7 +201,7 @@ class SchemaDotOrgContentModelDocumentationManager implements SchemaDotOrgConten
   public function getDefaultNotes(): string {
     return trim($this->configFactory
       ->get('schemadotorg_content_model_documentation.settings')
-      ->get('default_notes'));
+      ->get('default_notes') ?? []);
   }
 
   /**
@@ -210,7 +210,7 @@ class SchemaDotOrgContentModelDocumentationManager implements SchemaDotOrgConten
   public function getDefaultFormat(): string {
     return $this->configFactory
       ->get('schemadotorg_content_model_documentation.settings')
-      ->get('default_format');
+      ->get('default_format') ?? "";
   }
 
   /**

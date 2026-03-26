@@ -134,7 +134,7 @@ class SchemaDotOrgCustomFieldManager implements SchemaDotOrgCustomFieldManagerIn
     $this->customFieldProperties = [];
     $default_schema_properties = $this->configFactory
       ->get('schemadotorg_custom_field.settings')
-      ->get('default_schema_properties');
+      ->get('default_schema_properties') ?? [];
     foreach (array_keys($default_schema_properties ?? []) as $schema_property) {
       if (str_contains($schema_property, '--')) {
         $parts = explode('--', $schema_property);

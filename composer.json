@@ -1,4 +1,5 @@
 {
+    "minimum-stability": "dev",
     "name": "drupal/recommended-project",
     "description": "Project template for Drupal projects with a relocated document root",
     "type": "project",
@@ -24,6 +25,10 @@
         "drupal/devel": "^5.5",
         "drupal/gin": "^5.0",
         "drupal/schemadotorg": "^1.0@alpha",
+        "drupal/schemadotorg_starterkit_hotel": "^1.0@alpha",
+        "drupal/schemadotorg_starterkit_organization": "^1.0@alpha",
+        "drupal/schemadotorg_starterkit_podcast": "^1.0@alpha",
+        "drupal/schemadotorg_starterkit_recipes": "^1.0@alpha",
         "drupal/search_api": "^1.40",
         "drush/drush": "^13.7",
         "wikimedia/composer-merge-plugin": "^2.1"
@@ -31,7 +36,6 @@
     "conflict": {
         "drupal/drupal": "*"
     },
-    "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
         "allow-plugins": {
@@ -43,6 +47,7 @@
             "php-http/discovery": true,
             "php-tuf/composer-integration": true,
             "phpstan/extension-installer": true,
+            "cweagans/composer-patches": true,
             "wikimedia/composer-merge-plugin": true
         },
         "sort-packages": true

@@ -174,7 +174,7 @@ class SchemaDotOrgJsonLdCustomManager implements SchemaDotOrgJsonLdCustomInterfa
   protected function getDefaultJson(string $entity_type_id, string $schema_type, string $config_name): ?string {
     $settings = $this->configFactory
       ->get('schemadotorg_jsonld_custom.settings')
-      ->get($config_name);
+      ->get($config_name) ?? [];
     $parts = [
       'entity_type_id' => $entity_type_id,
       'schema_type' => $schema_type,

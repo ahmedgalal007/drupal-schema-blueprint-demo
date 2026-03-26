@@ -116,7 +116,7 @@ class SchemaDotOrgAdditionalTypeFieldAccessHandler implements SchemaDotOrgAdditi
 
     $field_access = $this->configFactory
       ->get('schemadotorg_additional_type.settings')
-      ->get('field_access');
+      ->get('field_access') ?? [];
     $entity_rules = $this->schemaTypeManager->getSetting($field_access ?? [], $parts, ['multiple' => TRUE]) ?? [];
 
     $operations = array_flip(['any', $operation]);

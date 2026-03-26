@@ -40,7 +40,7 @@ final class SchemaDotOrgOptionsManager implements SchemaDotOrgOptionsManagerInte
     // Set default field type for Schema.org types/properties with allowed values.
     $schema_property_allowed_values = $this->configFactory
       ->get('schemadotorg_options.settings')
-      ->get('schema_property_allowed_values');
+      ->get('schema_property_allowed_values') ?? [];
     $parts = [
       'schema_type' => $schema_type,
       'schema_property' => $schema_property,
@@ -96,7 +96,7 @@ final class SchemaDotOrgOptionsManager implements SchemaDotOrgOptionsManagerInte
     // Set allowed values based on the Schema.org property.
     $schema_property_allowed_values_settings = $this->configFactory
       ->get('schemadotorg_options.settings')
-      ->get('schema_property_allowed_values');
+      ->get('schema_property_allowed_values') ?? [];
     $parts = [
       'schema_type' => $schema_type,
       'schema_property' => $schema_property,
@@ -135,10 +135,10 @@ final class SchemaDotOrgOptionsManager implements SchemaDotOrgOptionsManagerInte
     // Set allowed values from range includes that are enumerations.
     $snake_case = $this->configFactory
       ->get('schemadotorg_options.settings')
-      ->get('use_snake_case');
+      ->get('use_snake_case') ?? [];
     $aliases = $this->configFactory
       ->get('schemadotorg_options.settings')
-      ->get('allowed_value_aliases');
+      ->get('allowed_value_aliases') ?? [];
     $alias_options = [
       'multiple' => FALSE,
       'parents' => FALSE,
@@ -179,7 +179,7 @@ final class SchemaDotOrgOptionsManager implements SchemaDotOrgOptionsManagerInte
     // Remove allowed values prefixes and suffixes based on the Schema.org property.
     $schema_property_allowed_values_suffix = $this->configFactory
       ->get('schemadotorg_options.settings')
-      ->get("schema_property_allowed_values_remove.$schema_property");
+      ->get("schema_property_allowed_values_remove.$schema_property") ?? [];
     if ($schema_property_allowed_values_suffix) {
       foreach ($allowed_values as $value => $text) {
         $text = preg_replace('#(^' . $schema_property_allowed_values_suffix . ' | ' . $schema_property_allowed_values_suffix . '$)#', '', $text);
