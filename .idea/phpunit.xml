@@ -3,9 +3,9 @@
   <component name="PHPUnit">
     <option name="directories">
       <list>
-        <option value="$PROJECT_DIR$/web/core/tests/PHPStan/tests" />
         <option value="$PROJECT_DIR$/web/modules/contrib/jsonapi_extras/tests/src" />
         <option value="$PROJECT_DIR$/web/modules/contrib/jsonapi_extras/modules/jsonapi_defaults/tests/src" />
+        <option value="$PROJECT_DIR$/web/core/tests/PHPStan/tests" />
       </list>
     </option>
   </component>

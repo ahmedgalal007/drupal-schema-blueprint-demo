@@ -54,7 +54,7 @@ class SchemaDotOrgAllowedFormatsManager implements SchemaDotOrgAllowedFormatsMan
         'field_name' => $field_values['field_name'],
         'schema_property' => $schema_property,
       ];
-      $allowed_formats = $this->schemaTypeManager->getSetting($default_allowed_formats, $schema_property_parts);
+      $allowed_formats = $this->schemaTypeManager->getSetting($default_allowed_formats, $schema_property_parts) ?? [];
       if (empty($allowed_formats)) {
         $schema_type_parts = [
           'entity_type_id' => $field_values['entity_type'],

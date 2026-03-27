@@ -105,7 +105,7 @@ class SchemaDotOrgMappingStorage extends ConfigEntityStorage implements SchemaDo
     $range_includes = $this->schemaTypeManager->getSetting(
       $schema_properties_range_includes,
       ['schema_type' => $schema_type, 'schema_property' => $schema_property]
-    ) ?? $this->schemaTypeManager->getPropertyRangeIncludes($schema_property);
+    ) ?? $this->schemaTypeManager->getPropertyRangeIncludes($schema_property) ?? [];
     return array_combine($range_includes, $range_includes);
   }
 

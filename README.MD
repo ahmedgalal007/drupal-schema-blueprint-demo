@@ -1,43 +1,56 @@
-# Create Drupal 11.x.
+<!-- TOC -->
+* [<span style=""> Install Drupal 11</span>](#install-drupal)
+* [<span style="">Configure Drupal</span>](#configure-drupal)
+* [<span style="">Install Schemadotorg Blueprint</span>](#install-schemadotorg-blueprint)
+<!-- TOC -->
+
+
+## Install Drupal
+<details style="margin-left: 30px;">
+    <summary style="font-size:16px;color:#00c4ff;">From Scratch</summary>
+
 ```bash
-composer create-project drupal/recommended-project <my-site-name-dir>
-cd my-site-name-dir
+    composer create-project drupal/recommended-project <my-site-name-dir>
+    cd my-site-name-dir
 ```
 
-################## <span style="color:red;">Or For DDEV</span> #####################
+  </details>
+
+  <details style="margin-left: 30px;">
+    <summary style="font-size:16px;color:#00c4ff;">DDEV</summary>
+
+
 ```bash
-mkdir my-drupal-site && cd my-drupal-site
-ddev config --project-type=drupal11 --docroot=web
-## Start DDEV (this may take a minute):
-ddev start
+    # mkdir my-drupal-site && cd my-drupal-site
+    ddev config --project-type=drupal11 --docroot=web
+    ddev start
 
-## Install Drupal via Composer:
-ddev composer create-project drupal/recommended-project
-ddev composer require drush/drush
+    ddev composer create-project drupal/recommended-project
+    ddev composer require drush/drush
 
-## Run Drupal installation and launch:
-ddev drush site:install --account-name=admin --account-pass=admin -y
-ddev launch
+    ddev drush site:install --account-name=admin --account-pass=admin -y
+    ddev launch
 ```
 
-# Change minimum stability to dev.
+  </details>
+
+
+## Configure Drupal
+#### Change minimum stability to dev.
 ```bash
-composer config minimum-stability dev
+ddev composer config minimum-stability dev
 ```
 
-# Require Packages.
+##### Require Packages.
 ```bash
-composer require drush/drush\
-  drupal/admin_toolbar\
-  drupal/devel\
-  drupal/schemadotorg:^1.0@alpha\
-  wikimedia/composer-merge-plugin;
+ddev composer require drupal/admin_toolbar drupal/devel   wikimedia/composer-merge-plugin;
+ddev composer require drupal/config_rewrite:^1.6
 ```
 
-# Add the merge-plugin settings to extras.
-### ``` in the composer.json
+##### Add the merge-plugin settings to extras.
+##### ``` in the composer.json
 ```json lines
- {
+{
   //...
   "extras": {
     //...
@@ -52,58 +65,193 @@ composer require drush/drush\
 }
 ```
 
-# Run composer update
+## Install Schemadotorg Blueprint
+
 ```bash
-composer update
+ddev composer require drupal/schemadotorg:^1.0@alpha;
 ```
+
+#### Run composer update
+```bash
+ddev composer update
+```
+
+
+
 
 # Install modules.
 ```bash
-drush install -y admin_toolbar devel schemadotorg_help
+ddev drush install -y admin_toolbar devel schemadotorg_help
+ddev drush install -y config_rewrite;
 ```
-
-# Install all Schema.org Blueprints modules.
-```bash
-drush pm-list --format=list | grep schemadotorg | xargs drush install -y
-
-## Or For DDEV
-ddev drush pm-list --format=list | grep schemadotorg | xargs ddev drush install -y
-```
-
-
-# Install Schema.org Blueprints Core modules.
-```bash
-drush pm-list --format=list --package='Schema.org Blueprints Cor' | xargs drush install -y
-
-## Or For DDEV
-ddev drush pm-list --format=list --package='Schema.org Blueprints Cor' | xargs ddev drush install -y
-```
-
-# Install Schema.org Blueprints Core modules.
-```bash
-drush pm-list --format=list --package='Schema.org Blueprints Cor' | xargs drush install -y
-
-## Or For DDEV
-ddev drush pm-list --format=list --package='Schema.org Blueprints Cor' | xargs ddev drush install -y
-```
-
-# UnInstall Those Schema.org Blueprints modules.
-```bash
-drush pmu schemadotorg_descriptions  schemadotorg_content_model_documentation
-
-## Or For DDEV
-ddev drush pmu schemadotorg_descriptions  schemadotorg_content_model_documentation
-```
-
 
 # Enable additional Core and Contrib modules.
 ```bash
-drush en -y media_library devel_generate
-
-## Or For DDEV
 ddev drush en -y media_library devel_generate
+```
+
+
+<details>
+<summary style="font-weight: bold; font-size: 24px;"> Install all Schema.org Blueprints modules.</summary>
+
+```bash
+Use the below Drush commands to install all or a package of Schema.org Blueprints modules.
+# Install all Schema.org Blueprints modules.
+ddev drush pm-list --format=list | grep schemadotorg | xargs ddev drush install -y
+
+------------------------------------------------------------------------------------------
+
+# Install Schema.org Blueprints Core modules.
+ddev drush pm-list --format=list --package='Schema.org Blueprints Core' | xargs ddev drush install -y
+
+# Install Schema.org Blueprints API modules.
+ddev drush pm-list --format=list --package='Schema.org Blueprints API' | xargs ddev drush install -y
+
+# Install Schema.org Blueprints Documentation modules.
+ddev drush pm-list --format=list --package='Schema.org Blueprints Documentation' | xargs ddev drush install -y
+
+# Install Schema.org Blueprints Entities modules.
+ddev drush pm-list --format=list --package='Schema.org Blueprints Entities' | xargs ddev drush install -y
+
+# Install Schema.org Blueprints Fields modules.
+ddev drush pm-list --format=list --package='Schema.org Blueprints Fields' | xargs ddev drush install -y
+
+# Install Schema.org Blueprints JSON-LD modules.
+ddev drush pm-list --format=list --package='Schema.org Blueprints JSON-LD' | xargs ddev drush install -y
+
+# Install Schema.org Blueprints Other modules.
+ddev drush pm-list --format=list --package='Schema.org Blueprints Other' | xargs ddev drush install -y
+
+# Install Schema.org Blueprints Paragraphs modules.
+ddev drush pm-list --format=list --package='Schema.org Blueprints Paragraphs' | xargs ddev drush install -y
+
+# Install Schema.org Blueprints Recipe modules.
+ddev drush pm-list --format=list --package='Schema.org Blueprints Recipe' | xargs ddev drush install -y
+
+# Install Schema.org Blueprints Starter Kit modules.
+ddev drush pm-list --format=list --package='Schema.org Blueprints Starter Kit' | xargs ddev drush install -y
+
+------------------------------------------------------------------------------------------
+
+# Install all Schema.org Blueprints modules.
+drush install -y schemadotorg\
+  schemadotorg_additional_mappings\
+  schemadotorg_additional_type\
+  schemadotorg_address\
+  schemadotorg_allowed_formats\
+  schemadotorg_auto_entitylabel\
+  schemadotorg_block_content\
+  schemadotorg_cer\
+  schemadotorg_content_model_documentation\
+  schemadotorg_content_moderation\
+  schemadotorg_custom_field\
+  schemadotorg_descriptions\
+  schemadotorg_diagram\
+  schemadotorg_entity_reference_override\
+  schemadotorg_epp\
+  schemadotorg_existing_values_autocomplete_widget\
+  schemadotorg_export\
+  schemadotorg_field_group\
+  schemadotorg_field_prefix\
+  schemadotorg_field_validation\
+  schemadotorg_geolocation\
+  schemadotorg_help\
+  schemadotorg_inline_entity_form\
+  schemadotorg_jsonapi\
+  schemadotorg_jsonapi_preview\
+  schemadotorg_jsonld\
+  schemadotorg_jsonld_breadcrumb\
+  schemadotorg_jsonld_custom\
+  schemadotorg_jsonld_embed\
+  schemadotorg_jsonld_endpoint\
+  schemadotorg_jsonld_preview\
+  schemadotorg_layout_paragraphs\
+  schemadotorg_mapping_set\
+  schemadotorg_media\
+  schemadotorg_mercury_editor\
+  schemadotorg_metatag\
+  schemadotorg_node\
+  schemadotorg_office_hours\
+  schemadotorg_options\
+  schemadotorg_paragraphs\
+  schemadotorg_pathauto\
+  schemadotorg_physical\
+  schemadotorg_recipe\
+  schemadotorg_report\
+  schemadotorg_role\
+  schemadotorg_scheduler\
+  schemadotorg_simple_sitemap\
+  schemadotorg_smart_date\
+  schemadotorg_starterkit\
+  schemadotorg_taxonomy\
+  schemadotorg_translation\
+  schemadotorg_type_tray\
+  schemadotorg_ui;
+
+# Install Schema.org Blueprints production modules.
+# The below modules should always be enabled on the production environment.
+drush install -y schemadotorg\
+  schemadotorg_additional_mappings\
+  schemadotorg_additional_type\
+  schemadotorg_address\
+  schemadotorg_block_content\
+  schemadotorg_custom_field\
+  schemadotorg_descriptions\
+  schemadotorg_entity_reference_override\
+  schemadotorg_epp\
+  schemadotorg_geolocation\
+  schemadotorg_jsonld\
+  schemadotorg_jsonld_breadcrumb\
+  schemadotorg_jsonld_custom\
+  schemadotorg_jsonld_embed\
+  schemadotorg_layout_paragraphs\
+  schemadotorg_office_hours\
+  schemadotorg_paragraphs\
+  schemadotorg_pathauto\
+  schemadotorg_physical\
+  schemadotorg_role\
+  schemadotorg_scheduler\
+  schemadotorg_smart_date\
+  schemadotorg_taxonomy\
+  schemadotorg_translation;
+
+# Install Schema.org Blueprints development modules.
+# The below modules should generally be enabled on only development environments.
+drush install -y schemadotorg_allowed_formats\
+  schemadotorg_auto_entitylabel\
+  schemadotorg_cer\
+  schemadotorg_content_model_documentation\
+  schemadotorg_content_moderation\
+  schemadotorg_diagram\
+  schemadotorg_existing_values_autocomplete_widget\
+  schemadotorg_export\
+  schemadotorg_field_group\
+  schemadotorg_field_prefix\
+  schemadotorg_field_validation\
+  schemadotorg_help\
+  schemadotorg_inline_entity_form\
+  schemadotorg_jsonapi\
+  schemadotorg_jsonapi_preview\
+  schemadotorg_jsonld_endpoint\
+  schemadotorg_jsonld_preview\
+  schemadotorg_mapping_set\
+  schemadotorg_media\
+  schemadotorg_mercury_editor\
+  schemadotorg_metatag\
+  schemadotorg_node\
+  schemadotorg_options\
+  schemadotorg_recipe\
+  schemadotorg_report\
+  schemadotorg_simple_sitemap\
+  schemadotorg_starterkit\
+  schemadotorg_type_tray\
+  schemadotorg_ui;
 
 ```
+</details>
+
+
+
 
 # Add Links to the Module Recipes in the Project Root.
 ```bash
@@ -128,11 +276,7 @@ ddev drush en -y media_library devel_generate
 
 # Install Gen Admin Theme.
 ```bash
-composer require 'drupal/gin:^5.0'
-
-## Or For DDEV
 ddev composer require 'drupal/gin:^5.0'
-
 ## Enable the theme ##
 
 drush then gin
@@ -160,6 +304,7 @@ composer require 'drupal/workflow_eca:^1.0@beta'
 [![ECA Tutorial](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=unAM6MeSeQQ)
 
 ## Modern web development with headless Drupal
+<video src="https://user-images.githubusercontent.com" width="600"></video>
 [![ECA Tutorial 2](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=okycKKNhH_0x)
 
 
@@ -176,7 +321,7 @@ composer require 'drupal/workflow_eca:^1.0@beta'
 </details>
 
 
-<details open>
+<details >
 <summary>For Form</summary>
 
 - [Inline Entity Form](https://www.drupal.org/project/inline_entity_form)  <span style="color:red">(*****)</span>
@@ -191,9 +336,19 @@ composer require 'drupal/workflow_eca:^1.0@beta'
   - manually download it from [download](http://google.com)
 </details>
 
+<details >
+<summary>For Article Managment</summary>
+
+- [Gin Type Tray](https://www.drupal.org/project/gin_type_tray) Arrange Create Content Form and the Articles by types
+- [Coffee](https://www.drupal.org/project/coffee)
+  * ddev composer require 'drupal/coffee:^2.0'
+- [Gin Login](https://www.drupal.org/project/gin_login)
+  * ddev composer require 'drupal/gin_login:^2.1'
+</details>
+
 ## How to configure your project for patches
 1- Update composer.json file
-```jsonpath
+```json lines
 {
   // ...
   "require": {
