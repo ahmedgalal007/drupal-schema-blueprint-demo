@@ -317,6 +317,7 @@ composer require 'drupal/workflow_eca:^1.0@beta'
 - [Hierarchical Select](https://www.drupal.org/project/hierarchical_select) <span style="color:red">(*****)</span>
   [![Hierarchical Select](https://www.drupal.org/files/images/hs2.png)]
 - [Simple hierarchical select](https://www.drupal.org/project/shs)
+- [Client-side Hierarchical Select](https://www.drupal.org/project/cshs)
 - [Webform Simple Hierarchical Select](https://www.drupal.org/project/webform_shs)
 </details>
 
@@ -332,6 +333,13 @@ composer require 'drupal/workflow_eca:^1.0@beta'
   - Important it's allow to insert diferent types in the same field ex. user | person | actor
 - [Field Group](https://www.drupal.org/project/field_group)<span style="color:red">(*****)</span>
 - [Group](https://www.drupal.org/project/group)<span style="color:red">(*****)</span>
+- [Subgroup](https://www.drupal.org/project/subgroup)<span style="color:red">(*****)</span>
+- [Group Content Moderation](https://www.drupal.org/project/gcontent_moderation)<span style="color:red">(*****)</span>
+- [Group context: Path prefix](https://www.drupal.org/project/group_context_path_prefix)
+- [Dashboard](https://www.drupal.org/project/dashboard)<span style="color:red">(*****)</span>
+- [Workflow Modeler](https://www.drupal.org/project/modeler)  OR  [BPMN.iO](https://www.drupal.org/project/bpmn_io)  For ECA Model
+  * Documentation For [ECA Workflow](https://ecaguide.org/eca/faq/)
+- [Toastify](https://www.drupal.org/project/eca) For notifications messages
 - [Conditional Fields](https://www.drupal.org/project/conditional_fields) <span style="color:red">(***)</span>
   - manually download it from [download](http://google.com)
 </details>
@@ -344,10 +352,17 @@ composer require 'drupal/workflow_eca:^1.0@beta'
   * ddev composer require 'drupal/coffee:^2.0'
 - [Gin Login](https://www.drupal.org/project/gin_login)
   * ddev composer require 'drupal/gin_login:^2.1'
+- [Theme Switcher Rules](https://www.drupal.org/project/theme_switcher) Change Theme for condition like the subsite or section
+- [Tooltip Taxonomy](https://www.drupal.org/project/tooltip_taxonomy)
+  * ddev composer require 'drupal/tooltip_taxonomy:^2.2'
+- [CKEditor Taxonomy Glossary](https://www.drupal.org/project/ckeditor_taxonomy_glossary)
+  * ddev composer require 'drupal/ckeditor_taxonomy_glossary:^1.0@alpha'
 </details>
 
 ## How to configure your project for patches
-1- Update composer.json file
+<details>
+<summary>Update composer.json file</summary>
+
 ```json lines
 {
   // ...
@@ -366,3 +381,14 @@ composer require 'drupal/workflow_eca:^1.0@beta'
   }
 }
 ```
+</details>
+
+
+## How to open DDEV PhpMyAdmin
+2- Open PhpMyAdmin
+```bash
+{
+  ddev get ddev/ddev-phpmyadmin
+}
+```
+
